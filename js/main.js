@@ -29,5 +29,32 @@ $(document).on('ready', function(){
 	// now invoke preHeatOven, passing in bake as an argument
 	preHeatOven(bake);
 
+	// Animate our #section-one
+	$('#section-one').animate({
+		'opacity': 0.25,
+		'width': '75%',
+		'border-width': 40
+	});
+
+	// 
+	$('#section-two').on('click', function(){
+		alert('You did it!');
+
+	})
+
+	// one animation triggering another element
+	// create an animation, inside of an anonymous function
+	// stored in a var
+	
+
+	var animateMenu = function(){
+		$('.menu').animate({
+			'border-width': 40,
+
+		});
+	}
+	$('.menu').show(animateMenu)
+	
 
 }) // closes doc.ready
+
